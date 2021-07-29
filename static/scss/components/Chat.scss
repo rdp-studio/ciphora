@@ -1,0 +1,96 @@
+@import '../themes';
+
+@include themify() {
+  .chat-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background 0.2s;
+  }
+
+  .chat-list-item:hover,
+  .chat-list-item-active {
+    background: themed('sidebarSelectedItemBackgroundColor');
+    cursor: pointer;
+  }
+
+  .chat-info {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .chat-info,
+  .chat-info-left,
+  .chat-info-left * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .chat-info-right {
+    text-align: right;
+  }
+
+  .chat-info-right > .chat-delete {
+    color: themed('secondaryForegroundColor');
+    font-size: 16px;
+  }
+
+  .chat-info-right > .chat-delete:hover {
+    color: themed('dangerColor');
+  }
+
+  .chat-time {
+    font-size: 14px;
+    color: themed('secondaryForegroundColor');
+  }
+
+  .chat-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .chat-initials {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 1rem;
+    line-height: 50px;
+    text-align: center;
+    background: lighten(themed('backgroundColor'), 20%);
+    border: 1px solid themed('highlightBorderColor');
+    font-weight: bold;
+    position: relative;
+  }
+
+  .chat-online {
+    width: 12px;
+    height: 12px;
+    right: 2px;
+    bottom: 2px;
+    position: absolute;
+    border-radius: 100%;
+    background-color: themed('onlineColor');
+  }
+
+  .chat-title {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 0;
+  }
+
+  .chat-snippet {
+    font-size: 14px;
+    color: themed('secondaryForegroundColor');
+    margin: 0;
+  }
+}

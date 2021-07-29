@@ -1,0 +1,33 @@
+@import '../themes';
+
+@include themify() {
+  button {
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 0.6rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: themed('primaryColor');
+    color: themed('buttonForegroundColor');
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: filter 250ms ease-in-out;
+    -webkit-appearance: none;
+  }
+
+  button:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+  }
+
+  button:active {
+    filter: brightness(60%);
+  }
+
+  button:disabled {
+    background: themed('backgroundColor');
+  }
+}

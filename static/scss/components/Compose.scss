@@ -1,0 +1,64 @@
+@import '../themes';
+
+@include themify() {
+  .compose-input-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    .compose-input {
+      flex: 1;
+      border: none;
+      background: none;
+      font-size: 14px;
+      padding: 0.5rem 0.8rem;
+      margin: 0rem;
+      background-color: themed('transparentBackgroundColor');
+      border-radius: 100rem;
+    }
+
+    .compose-input::placeholder {
+      opacity: 0.8;
+    }
+  }
+
+  .compose-chat {
+    font-size: 16px;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+
+    .compose-input {
+      background: none;
+    }
+
+    > span {
+      opacity: 0.5;
+      margin: 5px;
+    }
+  }
+
+  .compose {
+    padding: 0.5rem $horizontal-spacing;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    bottom: 0px;
+    background-color: themed('overlayBackgroundColor');
+    backdrop-filter: blur(20px);
+
+    .toolbar-button {
+      margin-right: $horizontal-spacing;
+      font-size: 1.5rem;
+      color: themed('primaryColor');
+    }
+
+    .toolbar-button:first-child {
+      margin-left: $horizontal-spacing;
+    }
+
+    .toolbar-button:last-child {
+      margin-right: 0rem;
+    }
+  }
+}
