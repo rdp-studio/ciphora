@@ -26,8 +26,6 @@ need for in-person verification like with other E2E encryption apps (WhatsApp,
 Signal,...) where identity keypairs are generated on a per-device basis and each
 has to be verified manually in-person.
 
-Learn more at https://habibrehman.com/work/ciphora
-
 <br>
 <p align="center">
   <a href="https://github.com/rdp-studio/ciphora/releases/latest">
